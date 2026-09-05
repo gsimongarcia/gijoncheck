@@ -165,15 +165,19 @@
     <div class="w-full max-w-[500px]">
 
         <!-- Top Header Navigation -->
-        <header class="sticky top-0 z-30 bg-[#111316]/90 backdrop-blur border-b border-white/10 px-4 py-3 flex items-center justify-between">
-            <div class="flex items-center gap-2.5">
-                <div class="w-8 h-8 rounded-xl bg-sea-soft border border-sea-border flex items-center justify-center text-sea font-bold text-base font-serif">
+        <header class="sticky top-0 z-30 bg-[#111316]/90 backdrop-blur border-b border-white/10 px-4 py-3 flex items-center justify-between gap-3">
+            <div class="flex items-center gap-2.5 min-w-0">
+                <div class="w-8 h-8 rounded-xl bg-sea-soft border border-sea-border flex items-center justify-center text-sea font-bold text-base font-serif flex-shrink-0">
                     G
                 </div>
-                <div>
-                    <h1 class="text-sm font-bold text-white tracking-tight">Gijón Frente al Mar</h1>
+                <div class="min-w-0">
+                    <h1 class="text-sm font-bold text-white tracking-tight truncate">Gijón Frente al Mar</h1>
                     <p class="text-[10px] tracking-wider text-neutral-400 uppercase font-medium">Guía de Estancia & Salida</p>
                 </div>
+            </div>
+            <div class="text-right flex-shrink-0">
+                <p class="text-[11px] font-bold text-sea leading-tight">Avenida Rufo García Rendueles, 19</p>
+                <p class="text-[10px] text-neutral-400 font-medium">7K</p>
             </div>
         </header>
 
@@ -268,9 +272,9 @@
                         <p class="text-xs text-neutral-300 pl-1 leading-relaxed">Toca con tu móvil a la tarjeta que está en la nevera para conectarte a Wifi.</p>
                     </div>
 
-                    <!-- Tile 3: Reservar a la limpiadora (CTA a Webel) -->
-                    <a href="https://dl.appwebel.com/ziXFRN0a" target="_blank" class="block bg-gradient-to-br from-sea-soft to-surface-card border border-sea-border rounded-3xl p-4 shadow-lg hover:border-sea transition-all active:scale-[0.99] group">
-                        <div class="flex items-center justify-between">
+                    <!-- Tile 3: Reservar a la limpiadora (CTA a Webel con botón arriba a la derecha) -->
+                    <div class="bg-gradient-to-br from-sea-soft to-surface-card border border-sea-border rounded-3xl p-4 shadow-lg">
+                        <div class="flex items-center justify-between gap-3 mb-2">
                             <div class="flex items-center gap-3">
                                 <div class="w-10 h-10 rounded-2xl bg-sea-soft border border-sea-border flex items-center justify-center text-sea flex-shrink-0">
                                     <span class="material-symbols-outlined text-xl">cleaning_services</span>
@@ -280,14 +284,13 @@
                                     <h3 class="text-sm font-bold text-white">Reservar a la limpiadora</h3>
                                 </div>
                             </div>
-                            <span class="material-symbols-outlined text-neutral-500 group-hover:text-sea transition-colors text-lg">open_in_new</span>
+                            <a href="https://dl.appwebel.com/ziXFRN0a" target="_blank" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-sea text-[#111316] font-bold text-xs shadow-sm hover:opacity-90 transition-all flex-shrink-0">
+                                <span class="material-symbols-outlined text-sm">open_in_new</span>
+                                Abrir Webel
+                            </a>
                         </div>
-                        <p class="text-xs text-neutral-300 mt-2.5 pl-1 leading-relaxed">Pide un repaso durante la estancia directamente desde la app Webel.</p>
-                        <div class="mt-3 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-sea text-[#111316] font-bold text-xs shadow-sm">
-                            <span class="material-symbols-outlined text-sm">open_in_new</span>
-                            Abrir Webel App
-                        </div>
-                    </a>
+                        <p class="text-xs text-neutral-300 pl-1 leading-relaxed">Pide un repaso durante la estancia directamente desde la app Webel.</p>
+                    </div>
                 </div>
             </section>
 
