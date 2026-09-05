@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gijón Apartment Checklist</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #f4f6f8;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            width: 100%;
+            max-width: 500px;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        h1 {
+            font-size: 1.5rem;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+        .task-card {
+            display: flex;
+            align-items: center;
+            background: #fafafa;
+            border: 1px solid #eaeaea;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 12px;
+        }
+        .task-card img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-right: 15px;
+        }
+        .task-info {
+            flex-grow: 1;
+        }
+        .task-info h3 {
+            margin: 0 0 5px 0;
+            font-size: 1rem;
+        }
+        .task-info p {
+            margin: 0;
+            font-size: 0.8rem;
+            color: #777;
+        }
+        input[type="checkbox"] {
+            width: 24px;
+            height: 24px;
+            accent-color: #007aff;
+            cursor: pointer;
+        }
+        .reset-btn {
+            width: 100%;
+            background-color: #ff3b30;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Gijón Check-Out</h1>
+    <div class="subtitle">Tap tag, complete list, enjoy the trip back.</div>
+
+    <div class="task-card">
+        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=150" alt="Router">
+        <div class="task-info">
+            <h3>Disconnect Router</h3>
+            <p>Unplug fiber box and Wi-Fi</p>
+        </div>
+        <input type="checkbox">
+    </div>
+
+    <div class="task-card">
+        <img src="https://images.unsplash.com/photo-1542013936693-8942b005a3fb?w=150" alt="Water valve">
+        <div class="task-info">
+            <h3>Main Water Valve</h3>
+            <p>Turn lever clockwise to shut off</p>
+        </div>
+        <input type="checkbox">
+    </div>
+
+    <div class="task-card">
+        <img src="https://images.unsplash.com/photo-1585338107529-13afc5f02586?w=150" alt="Thermostat">
+        <div class="task-info">
+            <h3>Set Thermostat</h3>
+            <p>Lower heating to 15°C eco mode</p>
+        </div>
+        <input type="checkbox">
+    </div>
+
+    <button class="reset-btn" onclick="location.reload();">Reset Checklist</button>
+</div>
+
+</body>
+</html>
