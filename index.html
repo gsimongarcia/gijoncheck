@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Guía del Apartamento</title>
+    <title>Apartamento Gijon</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -45,6 +45,23 @@
         header {
             text-align: center;
             margin-bottom: 2rem;
+        }
+
+        .hero-image-container {
+            width: 100%;
+            height: 200px;
+            border-radius: 1rem;
+            overflow: hidden;
+            margin-bottom: 1.2rem;
+            border: 1px solid var(--card-border);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
 
         header h1 {
@@ -169,6 +186,29 @@
             color: var(--completed-strike);
         }
 
+        .webel-btn-container {
+            padding: 0.5rem 0.75rem 0.9rem 0.75rem;
+            margin-top: -0.2rem;
+        }
+
+        .webel-btn {
+            display: block;
+            width: 100%;
+            text-align: center;
+            background-color: var(--accent-green);
+            color: #0b0f19;
+            font-weight: 600;
+            font-size: 0.9rem;
+            padding: 0.75rem 1rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            transition: opacity 0.15s ease;
+        }
+
+        .webel-btn:active {
+            opacity: 0.85;
+        }
+
         footer {
             text-align: center;
             margin-top: 2rem;
@@ -182,8 +222,11 @@
 
     <div class="container">
         <header>
-            <h1>Guía del Apartamento</h1>
-            <p>Toca cualquier tarea para marcarla como hecha</p>
+            <div class="hero-image-container">
+                <img src="20596.jpg" alt="Apartamento Gijon Vista">
+            </div>
+            <h1>Apartamento Gijon</h1>
+            <p>Guía de organización para tu estancia</p>
         </header>
 
         <h2 class="section-title checkin">📥 Entrada (Check-In)</h2>
@@ -218,6 +261,9 @@
                     </div>
                 </li>
             </ul>
+            <div class="webel-btn-container">
+                <a href="https://dl.appwebel.com/ziXFRN0a" target="_blank" class="webel-btn">🧹 Reservar a la limpiadora (Webel App)</a>
+            </div>
         </div>
 
         <h2 class="section-title checkout">📤 Salida (Check-Out)</h2>
@@ -298,12 +344,10 @@
         function toggleTask(itemElement, event) {
             const checkbox = itemElement.querySelector('.task-checkbox');
             
-            // Si el toque no vino directamente del checkbox, invertimos su estado actual
             if (event.target !== checkbox) {
                 checkbox.checked = !checkbox.checked;
             }
 
-            // Sincronizamos la clase visual con el estado real del checkbox
             if (checkbox.checked) {
                 itemElement.classList.add('completed');
             } else {
