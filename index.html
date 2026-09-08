@@ -600,5 +600,15 @@
 
     updateRing();
 </script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('.task-item').forEach(function (item) {
+            var checkbox = item.querySelector('.task-checkbox');
+            if (checkbox) checkbox.checked = false;
+            item.classList.remove('completed');
+        });
+    });
+</script>
+</body>    
 </body>
 </html>
