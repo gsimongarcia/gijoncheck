@@ -405,6 +405,25 @@
                     <div class="w-7 h-7 rounded-lg bg-stone-100 text-stone-700 flex items-center justify-center flex-shrink-0 shadow-xs">
                         <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'wght' 350;">coffee_maker</span>
                     </div>
-                    <div class="flex-1 pr-1">
-                        <h4 class="task-title text-xs font-semibold text-neutral-900">Cafetera</h4>
-                        <p class="task-desc text-xs text-stone-600 leading-
+                        particle.style.left = `${cx}px`;
+                    particle.style.top = `${cy}px`;
+                    particle.style.background = color;
+                    particle.style.boxShadow = `0 0 ${size * 1.5}px ${color}`;
+                    const angle = (Math.PI * 2 * i) / particleCount + Math.random() * 0.25;
+                    const distance = 90 + Math.random() * 140;
+                    const dx = Math.cos(angle) * distance;
+                    const dy = Math.sin(angle) * distance;
+                    const duration = 1.2 + Math.random() * 0.8;
+                    particle.style.setProperty('--end-transform', `translate(${dx}px, ${dy}px) scale(0.2)`);
+                    particle.style.animation = `confetti-burst ${duration}s cubic-bezier(0.15, 0.6, 0.35, 1) forwards`;
+                    document.body.appendChild(particle);
+                    particle.addEventListener('animationend', () => particle.remove());
+                }
+            }, b * 450);
+        }
+    }
+
+    updateRing();
+</script>
+</body>
+</html>
