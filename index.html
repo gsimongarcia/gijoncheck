@@ -90,6 +90,12 @@
             border-radius: 1.5rem 1.5rem 0 0;
         }
 
+        [data-section="checkout"] {
+            background: #ffffff !important;
+            backdrop-filter: none !important;
+            -webkit-backdrop-filter: none !important;
+        }
+
         .glossy-pill {
             background: rgba(255, 255, 255, 0.85);
             backdrop-filter: blur(12px);
@@ -120,7 +126,7 @@
         }
 
         .task-item:hover {
-            background-color: rgba(255, 255, 255, 0.9);
+            background-color: rgba(243, 244, 246, 0.6);
         }
 
         .task-checkbox {
@@ -338,11 +344,11 @@
                         <div>
                             <h4 class="text-xs font-semibold text-neutral-900">Agua</h4>
                             <p class="text-xs text-stone-600 leading-snug mt-0.5">
-                                <!-- Icono Abrir Agua (de 5 h a 8 h) -->
-                                <svg class="w-5 h-5 inline-block align-middle text-stone-500 -mt-1 mr-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M 15 17.5 C 12.5 19 8.5 18 6.5 13.5 L 6 12" />
-                                    <polyline points="4.2 14.5 6 12 8.5 13.8" />
-                                </svg>Abrir la llave de paso hacia la izquierda (ubicada debajo del fregadero).</p>
+                                <!-- Icono Abrir Agua con triángulo rotado 10° -->
+                                <svg class="w-4 h-4 inline-block align-middle text-stone-700 mr-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round">
+                                    <path d="M 15.5 16.5 C 13.0 18.5 9.5 17.5 7.0 14.0" stroke-width="1.5" />
+                                    <polygon points="3.94,10.94 8.77,12.23 5.23,15.77" transform="rotate(10, 7.0, 14.0)" fill="currentColor" stroke="currentColor" stroke-width="0.5" stroke-linejoin="round" />
+                                </svg>Abrir la llave de paso (ubicada debajo del fregadero).</p>
                         </div>
                     </div>
                     <!-- Electrodomésticos, Conexión y Termo -->
@@ -356,6 +362,7 @@
                                 <li>Comprobar la nevera y apagar su pitido tocando un botón (donde marca la temperatura).</li>
                                 <li>Conectar el rúter de internet.</li>
                                 <li>Encender el termo eléctrico (armario junto al fregadero).</li>
+                                <li><strong>Cafetera:</strong> Como puede haber estado sin usarse, te sugerimos hacer un primer café vacío (sin café) para limpiar el circuito y renovar el agua estancada.</li>
                             </ul>
                         </div>
                     </div>
@@ -406,6 +413,7 @@
             </div>
         </div>
     </section>
+
     <!-- SECCIÓN 2: CHECKLIST DE SALIDA (Check-out) -->
     <section class="mb-4">
         <div class="flex items-center justify-between mb-3 px-1">
@@ -527,11 +535,11 @@
                     <div class="flex-1 pr-1">
                         <h4 class="task-title text-xs font-semibold text-neutral-900">Agua</h4>
                         <p class="task-desc text-xs text-stone-600 leading-snug mt-0.5">
-                            <!-- Icono Cerrar Agua (de 10 h a 7 h) -->
-                            <svg class="w-5 h-5 inline-block align-middle text-stone-500 -mt-1 mr-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M 6.5 7.5 C 6 10 6.5 13.5 10 16.5 L 11 17.2" />
-                                <polyline points="8.5 17.5 11 17.2 11 14.5" />
-                            </svg>Cerrar la llave de paso hacia abajo (ubicada debajo del fregadero).</p>
+                            <!-- Icono Cerrar Agua con triángulo equilátero perfecto -->
+                            <svg class="w-4 h-4 inline-block align-middle text-stone-700 mr-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round">
+                                <path d="M 7.2 8.5 C 6.5 11 7 13.5 9.5 15.5" stroke-width="1.5" />
+                                <polygon points="12.56,18.56 7.73,17.27 11.27,13.73" fill="currentColor" stroke="currentColor" stroke-width="0.5" stroke-linejoin="round" />
+                            </svg>Cerrar la llave de paso (ubicada debajo del fregadero).</p>
                     </div>
                 </li>
                 <li class="task-item" onclick="toggleTask(this, event)">
@@ -564,6 +572,7 @@
         <span class="text-[9px] font-bold text-stone-400 uppercase tracking-wider mt-1" id="progressLabel">Salida</span>
     </div>
 </div>
+
 <script>
     // Reset any browser-restored checkbox state before anything else reads it
     document.querySelectorAll('.task-item').forEach(function (item) {
